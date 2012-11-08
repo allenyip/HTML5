@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5代码结构示例</title>
+<meta charset='utf-8'>
+</head>
+<body>
+<header>
+  <hgroup>
+    <h1>HTML5</h1>
+    <h2>代码结构示例</h2>
+  </hgroup>
+</header>
+<nav>
+  <menu>
+    <li>菜单1</li>
+    <li>菜单2</li>
+    <li>菜单3</li>
+    <li>菜单4</li>
+  </menu>
+</nav>
+<section>
+  <article>
+    <h2>文章标题</h2>
+    <p> 发表时间：
+      <time datetimt="2012-10-14 11:11:11">2012年10月14日 11:11:11</time>
+      文章评分：
+      <meter value="88" min="0" max="100" low="65" high="96" optimum="100">80</meter>
+      载入进度：
+      <progress value="75" max="100">3/4 complete</progress>
+    </p>
+    <p>datalist示例，输入英文B提示，
+      <m>不重要的文字</m>
+    </p>
+    <input list="cars"/>
+    <datalist id="cars">
+      <option value="BMW"/>
+      <option value="Bentley"/>
+      <option value="BYD"/>
+      <option value="Ford"/>
+      <option value="Volvo"/>
+      <option value="Nissan"/>
+    </datalist>
+    <h3>文章图片：</h3>
+    <figure>
+      <legend>这是图片说明</legend>
+      <img alt="替换文本" src="images/example-graph.png" /> </figure>
+    <h3>文章音频：</h3>
+    <audio src="images/audio.ogg" controls> 请升级你的浏览器。 </audio>
+    <h3>文章视频：</h3>
+    <video src="images/video.ogg" controls> 请升级你的浏览器。 </video>
+    <h3>文章画布：</h3>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"> 请升级你的浏览器。 </canvas>
+    <script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var cxt=c.getContext("2d");
+var grd=cxt.createLinearGradient(0,0,175,50);
+grd.addColorStop(0,"#FF0000");
+grd.addColorStop(1,"#00FF00");
+cxt.fillStyle=grd;
+cxt.fillRect(0,0,175,50);
+
+</script>
+    <command type="command">点这里了解更多</command>
+  </article>
+  <div id="comments">
+    <dialog>
+      <dt>发言者</dt>
+      <dd>发言内容</dd>
+      <!-- 在HTML5中，dt用于表示发表者，dd表示发表的内容 -->
+      <dt>发言者2</dt>
+      <dd>发言内容2</dd>
+    </dialog>
+  </div>
+</section>
+<sidebar>
+  <h2>广告侧边栏</h2>
+  <新一代Web技术<a title="HTML5" href="http://www.w3school.com.cn/html5/">HTML5</a>。>
+  <details>
+    <legend>了解更多</legend>
+    <p>折叠的内容</p>
+  </details>
+</sidebar>
+<footer> 页脚。Copyright @ Allen </footer>
+</body>
+</html>

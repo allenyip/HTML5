@@ -1,0 +1,1260 @@
+﻿<!DOCTYPE html>
+<!--
+  URL: http://code.google.com/p/html5slides/
+-->
+<html>
+<head>
+<title>HTML5 Presentation</title>
+<meta charset='utf-8'>
+<script
+      src='../slides.js'></script>
+</head>
+<body style='display: none'>
+<section class='slides layout-regular template-default'> 
+  <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+  <article class='biglogo'> </article>
+  <article>
+    <h1> HTML5 <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Next Web Technology </h1>
+    <p> Allen Yip <br>
+      Oct. 16, 2012 </p>
+  </article>
+  <article>
+    <h3> Demos </h3>
+    <ul class="build">
+      <li> <a href='http://inventikasolutions.com/demo/iPod/' target='_blank'>HTML5 App</a> </li>
+      <br/>
+      <li> <a href='http://cuttherope.ie' target='_blank'>HTML5 Game</a> </li>
+      <br/>
+      <li> <a href='http://www.apple.com/html5/showcase/video/' target='_blank'>HTML5 Demos by Apple</a> </li>
+      <br/>
+    </ul>
+    <div class="build">
+      <p><a href='http://www.html5test.com' target='_blank'>HTML5 Test</a></p>
+      <p> Parsing rules, Canvas, Video, Audio, Elements, Froms, UI... </p>
+    </div>
+  </article>
+  <article>
+    <h3> Features </h3>
+    <ul>
+      <li> 语义 Semantics <img style='height: 20px' src='images/HTML5_Semantics_32.png'> </li>
+      <li> 离线存储 Storage <img style='height: 20px' src='images/HTML5_Offline_Storage_32.png'> </li>
+      <li> 设备访问 Access <img style='height: 20px' src='images/HTML5_Device_Access_32.png'> </li>
+      <li> 连接 Connectivity <img style='height: 20px' src='images/HTML5_Connectivity_32.png'> </li>
+      <li> 多媒体 MultiMedia <img style='height: 20px' src='images/HTML5_MultiMedia_32.png'> </li>
+      <li> 三D图形及特效 3D Effects <img style='height: 20px' src='images/HTML5_3D_Effects_32.png'> </li>
+      <li> 性能与集成 Performance <img style='height: 20px' src='images/HTML5_Performance_32.png'> </li>
+      <li> CSS3 <img style='height: 20px' src='images/HTML5_Styling_32.png'> </li>
+    </ul>
+  </article>
+  <article>
+    <h1 align='center'> Semantics </h1>
+    <p align='center'> 语义特性 <img style='height: 25px' src='images/HTML5_Semantics_32.png'> </p>
+  </article>
+  <article>
+    <h3> Better Semantic Tags </h3>
+    <section>
+      <pre>
+&lt;header&gt; &lt;footer&gt;——标题和页脚。
+&lt;nav&gt;——导航。
+&lt;article&gt;——可独自分布的独立项目，如博客、评论。
+&lt;section&gt;——文档或应用程序的一部分，如文章的章、节。
+&lt;aside&gt;——内容无关的边栏，如广告。
+&lt;hgroup&gt;——标题组。
+
+&lt;<b>canvas</b>&gt;——画布，使用 JavaScript 在网页上绘制图像。
+&lt;<b>audio</b>&gt;——音频，支持Ogg, Mp3, Wav。
+&lt;<b>video</b>&gt;——视频，支持Ogg, MPEG4, WebM。
+……
+</pre>
+    </section>
+    <div class="build"> <a href="tags_demo.html" target="_blank">HTML5代码结构示例</a> </div>
+  </article>
+  <article>
+    <h3> New Form Types </h3>
+    <style>
+            .form-inputs {
+              font-size: 50%;
+            }
+            .form-inputs input {
+              float: right;
+              border: 1px solid #CCC;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+              padding: 3px 5px;
+            }
+            input[required] {
+              border-color: #88a;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+            }
+            input:invalid {
+              border-color: #e88;
+              -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+            }
+            </style>
+    <section>
+      <pre>
+&lt;style&gt;
+  [required] {
+    border-color: #88a;  -webkit-box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+  }
+  :invalid {
+    border-color: #e88;  -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+  }
+&lt;/style&gt;
+</pre>
+    </section>
+    <pre class="form-inputs">
+<input type="text" required />&lt;input type="text" <b>required</b> /&gt;
+<input type="email" value="some@email.com" />&lt;input type="<b>email</b>" value="some@email.com" /&gt;
+<input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14" />&lt;input type="<b>date</b>" <b>min</b>="2010-08-14" <b>max</b>="2011-08-14" value="2010-08-14"/&gt;
+<input type="range" min="0" max="50" value="10" />&lt;input type="<b>range</b>" <b>min</b>="0" <b>max</b>="50" value="10" /&gt;
+
+<input results="10" type="search" placeholder="Search..." />&lt;input type="<b>search</b>" <b>results</b>="10" <b>placeholder</b>="Search..." /&gt;
+<input type="tel" placeholder="(555) 555-5555" pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" />&lt;input type="<b>tel</b>"  <b>placeholder</b>="(555) 555-5555"
+	<b>pattern</b>="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$" /&gt;
+<input type="color" placeholder="e.g. #bbbbbb" />&lt;input type="<b>color</b>" <b>placeholder</b>="e.g. #bbbbbb" /&gt;
+<input type="number" step="1" min="-5" max="10" value="0" />&lt;input type="<b>number</b>" <b>step</b>="1" <b>min</b>="-5" <b>max</b>="10" value="0" /&gt;
+<div style="height:0px; clear:both;">
+</pre>
+  </article>
+  <article>
+    <h1 align='center'> Storage </h1>
+    <p align='center'> 离线存储 <img style='height: 25px' src='images/HTML5_Offline_Storage_32.png'> </p>
+  </article>
+  <article>
+    <h3> Web Storage </h3>
+    <section>
+      <pre>
+// use localStorage for persistent storage
+// use sessionStorage for per tab storage
+saveButton.addEventListener('click', function () {
+  window.localStorage.setItem('value', area.value);
+  window.localStorage.setItem('timestamp', (new Date()).getTime());
+}, false);
+textarea.value = window.localStorage.getItem('value');
+</pre>
+      <p id="localstorage-message">Save text value on the client side (crash-safe)</p>
+      <textarea id="ta" rows=6 cols=30 placeholder="Type your text here..."></textarea>
+      <button id="save-ta">Save</button>
+      <p id="ta-log"></p>
+      <script defer>
+              (function(){
+
+                try {
+                  (window.localStorage.getItem) // will throw in Firefox under some settings
+                } catch(e){
+                  return; // quit because dom.storage.enabled is false
+                }
+
+                var area = document.querySelector('#ta');
+                // place content from previous edit
+                if (!area.value) {
+                  area.value = window.localStorage.getItem('value');
+                }
+                updateLog(false);
+  
+                // your content will be saved locally
+                document.querySelector('#save-ta').addEventListener('click', function () {
+                  window.localStorage.setItem('value', area.value);
+                  window.localStorage.setItem('timestamp', (new Date()).getTime());
+                  updateLog(true);
+                }, false);
+
+                function updateLog(new_save) {
+                  var log = document.querySelector("#ta-log");
+                  var delta = 0;
+                  if (window.localStorage.getItem('value')) {
+                    delta = ((new Date()).getTime() - (new Date()).setTime(window.localStorage.getItem('timestamp'))) / 1000;
+                    if (new_save) {
+                      log.textContent = 'Saved. Content will be available after browser refresh/reopen.';
+                      setTimeout(function() {
+                        log.textContent = '';
+                      }, 3000);
+                    } else {
+                      log.textContent = 'last saved: ' + delta + 's ago';
+                    }
+                  }
+                }
+
+              })();  
+            </script> 
+    </section>
+  </article>
+  <article>
+    <h3> Web SQL Database </h3>
+    <section>
+      <pre>
+var db=window.openDatabase("DBName", "1.0", "description", 5*1024*1024); //5MB
+db.transaction(function(tx) {
+  tx.executeSql("SELECT * FROM test", [], successCallback, errorCallback);
+});
+</pre>
+      <div class="center" id="websqldb-example">
+        <input type="text" id="todoitem" />
+        <button onclick="webSqlSample.newRecord()">new to do item</button>
+        <button onclick="webSqlSample.createTable()">create table</button>
+        <button onclick="webSqlSample.dropTable()">drop table</button>
+        <p>数据库查看方式：打开工具->开发者工具->Web SQL</p>
+        <ul class="record-list" id="db-results">
+        </ul>
+        <div id="db-log"></div>
+      </div>
+      <script defer>
+            var webSqlSample = (function() {
+              var db;
+              var log = document.getElementById('db-log');
+              if (window.openDatabase) {
+                db = openDatabase("DBTest", "1.0", "HTML5 Database API example", 200000);
+                showRecords();  
+              }
+              document.getElementById('db-results').addEventListener('click', function(e) { e.preventDefault(); }, false);
+
+              function onError(tx, error) {
+                log.innerHTML = '<p class="error">Error: ' + error.message + '</p>';
+              }
+
+              // select all records and display them
+              function showRecords() {
+                document.getElementById('db-results').innerHTML = '';
+                db.transaction(function(tx) {
+                  tx.executeSql("SELECT * FROM Table1Test", [], function(tx, result) {
+                    for (var i = 0, item = null; i < result.rows.length; i++) {
+                      item = result.rows.item(i);
+                      document.getElementById('db-results').innerHTML += 
+                          '<li><span contenteditable="true" onkeyup="webSqlSample.updateRecord('+item['id']+', this)">'+
+                          item['text'] + '</span> <a href="#" onclick="webSqlSample.deleteRecord('+item['id']+')">[Delete]</a></li>';
+                    }
+                  });
+                });
+              }
+
+              function createTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("CREATE TABLE Table1Test (id REAL UNIQUE, text TEXT)", [],
+                      function(tx) {  log.innerHTML = '<p>"Table1Test" created!</p>' },
+                      onError);
+                });
+              }
+
+              // add record with random values
+              function newRecord() {
+                var num = Math.round(Math.random() * 10000); // random data
+                db.transaction(function(tx) {
+                  tx.executeSql("INSERT INTO Table1Test (id, text) VALUES (?, ?)", [num, document.querySelector('#todoitem').value],
+                      function(tx, result) {
+                        log.innerHTML = '';
+                        showRecords();
+                      }, 
+                      onError);
+                });
+              }
+
+              function updateRecord(id, textEl) {
+                db.transaction(function(tx) {
+                  tx.executeSql("UPDATE Table1Test SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
+                });
+              }
+
+              function deleteRecord(id) {
+                db.transaction(function(tx) {
+                  tx.executeSql("DELETE FROM Table1Test WHERE id=?", [id],
+                      function(tx, result) { showRecords() }, 
+                      onError);
+                });
+              }
+
+              // delete table from db
+              function dropTable() {
+                db.transaction(function(tx) {
+                  tx.executeSql("DROP TABLE Table1Test", [],
+                      function(tx) { showRecords() }, 
+                      onError);
+                });
+              }
+              
+              return {
+                newRecord: newRecord,
+                createTable: createTable,
+                updateRecord: updateRecord,
+                deleteRecord: deleteRecord,
+                dropTable: dropTable
+              }
+            })();
+          </script> 
+    </section>
+  </article>
+  <article>
+    <h1 align='center'> Access </h1>
+    <p align='center'> 设备访问 <img style='height: 25px' src='images/HTML5_Device_Access_32.png'> </p>
+  </article>
+  <article>
+    <style>
+            #speech-input-field {
+              width: 400px;
+              height: 30px;
+              padding: 10px 15px;
+              font-size: 100%;
+              border-radius: 10px;
+              border: 1px solid #ccc;
+              outline: 0;
+            }
+          </style>
+    <h3> Speech Input </h3>
+    <section>
+      <pre>
+&lt;input type="text" <b>x-webkit-speech</b> /&gt;
+</pre>
+      <input id="speech-input-field" type="text" x-webkit-speech />
+    </section>
+  </article>
+  <article>
+    <h3> Native Drag & Drop </h3>
+    <section>
+      <pre>
+document.querySelector('#dropzone').addEventListener('drop', function(e) {
+  var reader = new FileReader();
+  reader.onload = function(evt) {
+    document.querySelector('img').src = evt.target.result;
+  };
+  reader.readAsDataURL(e.dataTransfer.files[0]);
+}, false);
+</pre>
+      <div class="slide device-access" id="drag-and-drop">
+        <style>
+            #drag-zone {
+              list-style: none;
+              float: left;
+            }
+            #drag-zone li * {
+              border: 4px solid #888;
+              display: block;
+            }
+            #drag-zone, #drop-zone, #drop-data { width: 20%; }
+            #drop-zone, #drop-data {
+              padding: 40px;
+              border: 5px solid #888;
+              float: right;
+              height: 240px;
+              overflow: auto;
+            }
+            #drop-zone.hovering {
+              border: 5px solid #aaa;
+              background-color: rgba(255, 0, 0, 0.199219);
+            }
+            #drop-data { 
+              background-color: #eee;
+              font-family: Monospace;
+              -ms-word-wrap: break-word;
+              word-wrap: break-word;
+            }
+            .datatypes {
+              font-weight: bold;
+            }
+            .draggable-text {
+              padding: 5px;
+            }
+          </style>
+        <section id="dnd-section">
+          <ol id="drag-zone">
+            <li><img src="images/dwd1.png" draggable class="copy" /></li>
+            <li><span class="draggable-text" draggable>Select text and drag</span></li>
+          </ol>
+          <div id="drop-data">Source Data</div>
+          <div id="drop-zone">Drop Area</div>
+          <script defer>
+            (function() {
+              var dragZone = document.querySelector('#drag-zone');
+              var dropZone = document.querySelector('#drop-zone');
+              dragZone.addEventListener('dragstart', function(event) {
+                if (event.target.className) { // img case
+                  event.dataTransfer.effectAllowed = event.target.className;
+                  event.target.style.border = "4px solid #cc3300";
+                }
+                else { // text case
+                  if (event.target.parentNode.className == 'overwrite') {
+                    event.dataTransfer.setData("text", "<strong>Overwritten Content</strong>");
+                  }
+                  event.target.parentNode.style.border = "4px solid #cc3300";
+                }
+                return true;
+              }, true);
+              dragZone.addEventListener('dragend', function(event) {
+                if (event.target.className) { // img case
+                  event.target.style.border = "4px solid #888";
+                }
+                else { // text case
+                  event.target.parentNode.style.border = "4px solid #888";
+                }
+                return true;
+              }, true);
+              dropZone.addEventListener('dragenter', function(event) {
+                if (event.preventDefault) event.preventDefault();
+                event.dataTransfer.dropEffect = 'copy';
+                this.className = 'hovering';
+                return false;
+              }, false);
+              dropZone.addEventListener('dragover', function(event) {
+                if (event.preventDefault) event.preventDefault(); // allows us to drop
+                event.dataTransfer.dropEffect = 'copy';
+                return false;
+              }, false);
+              dropZone.addEventListener('dragleave', function(event) {
+                if (event.preventDefault) event.preventDefault(); // allows us to drop
+                this.className = '';
+                return false;
+              }, false);
+              dropZone.addEventListener('drop', function(event) {
+                if (event.preventDefault) event.preventDefault();
+                var imgPassed = null;
+                var dropdata = document.querySelector('#drop-data');
+                var types = event.dataTransfer.types;
+                document.querySelector('#drop-data').textContent = '';
+                this.innerHTML = '';
+                for (var i = 0; i < types.length; i++) {
+                  if (types[i] == 'Files') {
+                    var files = event.dataTransfer.files;
+                    for (var j = 0; j < files.length; j++) {
+                      dropdata.textContent += 'File Name: '+files[j].fileName;
+                      dropdata.textContent += 'File Size: '+files[j].fileSize;
+                    }
+                  }
+                  else {
+                    if (typeof event.dataTransfer.getData(types[i]) !== 'undefined') {
+                      dropdata.innerHTML += '<p><em class="datatypes">'+types[i]+'</em>: <br />'+event.dataTransfer.getData(types[i]).replace(/</g, '&lt;') + '</p>';
+                    }
+                  }
+
+                  if (types[i] == 'text/uri-list') {
+                    imgPassed = event.dataTransfer.getData('text/uri-list');
+                  }
+                }
+                if (imgPassed) {
+                  var cEl = document.createElement('canvas');
+                  cEl.width = 200;
+                  cEl.height = 100;
+                  var ctx = cEl.getContext('2d');
+                  var img_buffer = document.createElement('img');
+                  img_buffer.src = imgPassed;
+                  img_buffer.style.display = 'none';
+                  document.body.appendChild(img_buffer); // this line only needed in safari
+                  img_buffer.onload = function() { ctx.drawImage(img_buffer,0,0,100,100); }
+                  this.appendChild(cEl);
+                } else {
+                  if (event.dataTransfer.getData('text')) {
+                    this.innerHTML = event.dataTransfer.getData('text');
+                  }
+                  else if (event.dataTransfer.getData('text/plain')) {
+                    this.innerHTML = event.dataTransfer.getData('text/plain');
+                  }
+                }
+                return false;
+              }, false);
+            })();
+            </script> 
+        </section>
+      </div>
+    </section>
+  </article>
+  <article>
+    <h3> Desktop Drag-In </h3>
+    <section>
+      <pre>
+document.querySelector('#dropzone').addEventListener('drop', function(e) {
+  var reader = new FileReader();
+  reader.onload = function(evt) {
+    document.querySelector('img').src = evt.target.result;
+  };
+  reader.readAsDataURL(e.dataTransfer.files[0]);
+}, false);
+</pre>
+      <div class="slide device-access" id="drag-in">
+        <style>
+            #dropzone {
+              height: 150px;
+              width: 100%;
+              -webkit-border-radius: 10px;
+              -khtml-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              border: 2px dashed #0687FF;
+            }
+            #dropzone.rounded {
+              -webkit-box-shadow: inset 0px 0px 50px #777;
+              -moz-box-shadow: inset 0px 0px 50px #777;
+              -o-box-shadow: inset 0px 0px 50px #777;
+              box-shadow: inset 0px 0px 50px #777;
+            }
+            #dnd-thumbnails {
+              height: 125px;
+              margin-top: 10px;
+            }
+            #dnd-thumbnails img {
+              width: 75px;
+              height: 75px;
+              border: 1px solid black;
+              margin-right: 10px;
+              -webkit-transition: -webkit-transform 0.2s ease-in, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+              -moz-transition: -moz-transform 1s ease-in-out, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+              -o-transition: -o-transform 1s ease-in-out, margin-left 1s ease-in-out, margin-left 0.7s ease-in-out, margin-right 0.7s ease-in-out;
+            }
+            #dnd-thumbnails img:hover {
+              -webkit-transform: scale(3.0) rotate(10deg);
+              -webkit-transform-origin: 50% 75px;
+              -moz-transform: scale(3.0) rotate(10deg);
+              -moz-transform-origin: 50% 75px;
+              margin: 0 100px;
+            }
+          </style>
+        <section>
+          <div class="example">
+            <div id="dropzone" class="vbox boxcenter center"> Drop in images from your desktop </div>
+          </div>
+          <div id="dnd-thumbnails" class="center"></div>
+          <script src="images/test.js" defer></script> 
+          <script defer>
+              window.addEventListener('load', function(e) {
+                var dndc = new DNDFileController('dropzone', 'dnd-thumbnails');
+              }, false);
+            </script> 
+        </section>
+      </div>
+    </section>
+  </article>
+  <article>
+    <h3> Desktop Drag-out </h3>
+    <section>
+      <pre>
+&lt;a href="src/star.mp3" draggable="true" class="dragout"
+   data-downloadurl="<b>MIMETYPE:FILENAME:ABSOLUTE_URI_TO_FILE</b>"&gt;download&lt;/a&gt;
+</pre>
+      <pre>
+var files = document.querySelectorAll('.dragout');
+for (var i = 0, file; file = files[i]; ++i) {
+  file.addEventListener('dragstart', function(e) {
+    e.dataTransfer.setData('DownloadURL', this.dataset.downloadurl);
+  }, false);
+}
+</pre>
+      <div class="slide device-access" id="drag-out">
+        <style>
+            .dragout {
+              cursor: move;
+              background: #ddd;
+              padding: 6px;
+              margin: 10px;
+              border: 1px solid #666;
+            }
+          </style>
+        <section id="dnd-section">
+          <div class="example"> 拉到桌面: <a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en/us/intl/en/landing/chrome/cadie/glasses.pdf" class="dragout" data-downloadurl="application/pdf:Chrome3DGlasses.pdf:http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en/us/intl/en/landing/chrome/cadie/glasses.pdf">.pdf file</a> <a href="src/star.mp3" class="dragout" data-downloadurl="audio/mpeg:star.mp3:http://slides.html5rocks.com/src/star.mp3">.mp3 file</a> </div>
+          <script defer>
+              (function() {
+                var files = document.querySelectorAll('.dragout');
+                for (var i = 0, file; file = files[i]; ++i) {
+                  file.setAttribute('draggable', 'true'); // Don't really need, but good practice.
+                  file.addEventListener('dragstart', function(evt) {
+                    evt.dataTransfer.setData('DownloadURL', this.getAttribute('data-downloadurl'));
+                  }, false);
+                }
+              })();
+            </script> 
+        </section>
+      </div>
+    </section>
+  </article>
+  <article>
+    <h3> Geolocation </h3>
+    <section>
+      <pre>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var latLng = new google.maps.LatLng(
+        position.coords.latitude, position.coords.longitude);
+    var marker = new google.maps.Marker({position: latLng, map: map});
+    map.setCenter(latLng);
+  }, errorHandler);
+}
+</pre>
+      <a href="http://www.w3school.com.cn/tiy/t.asp?f=html5_geolocation_map_script" target="_blank">W3C</a>
+      <p id="demo">获取位置：</p>
+      <button onclick="getLocation()">获取位置</button>
+      <div id="mapholder"></div>
+      <script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+      <script>
+var x=document.getElementById("demo");
+function getLocation()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+  else{x.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function showPosition(position)
+  {
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='500px';
+
+  var myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+  }
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script> 
+    </section>
+  </article>
+  <article>
+    <h1 align='center'> Connectivity </h1>
+    <p align='center'> 连接 <img style='height: 25px' src='images/HTML5_Connectivity_32.png'> </p>
+  </article>
+  <article>
+    <h3> Web Workers </h3>
+    <section>
+      <pre>
+w=new Worker("demo_workers.js");
+w.onmessage = function (event) {
+    document.getElementById("worker_result").innerHTML=event.data;
+};
+w.terminate();
+</pre>
+      <a href="http://www.w3school.com.cn/html5/html_5_webworkers.asp" target="_blank">W3C</a>
+      <p>计数:
+        <output id="worker_result"></output>
+      </p>
+      <button onclick="startWorker()">开始 Worker</button>
+      <button onclick="stopWorker()">停止 Worker</button>
+      <br />
+      <br />
+      <script>
+var w;
+
+function startWorker()
+{
+if(typeof(Worker)!=="undefined")
+  {
+  if(typeof(w)=="undefined")
+  {
+	try{
+	w=new Worker("images/demo_workers.js");
+	}catch(err){
+	document.getElementById("worker_result").innerHTML="error";	
+	}
+  }
+  w.onmessage = function (event) {
+    document.getElementById("worker_result").innerHTML=event.data;
+    };
+  }
+else
+  {
+  document.getElementById("worker_result").innerHTML="Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker()
+{ 
+w.terminate();
+}
+</script> 
+    </section>
+  </article>
+  <article>
+    <h3>Notifications </h3>
+    <section>
+      <pre>
+function showNotification() {
+        var newNotification = Notifications.createNotification(
+            "http://static.himlt.com/uploads/2012/07/html5.png",
+            "Hello,我是通知框标题!",
+            "女士们先生们大家好，我是通知框内容。hi,i'm Notification body."
+        );
+        newNotification.ondisplay = function() {
+            var temp = this;
+            window.setTimeout( function(){temp.cancel();} , 10000);
+        };
+        newNotification.show();
+    }
+</pre>
+      <a href="http://chrome.360.cn/html5_labs/demos/notifications/index.html" target="_blank">360</a> <br>
+      <button id='showButton'>显示网页通知(Notification)</button>
+      <div id="msg"></div>
+      <script>
+var msgBox = document.getElementById('msg');
+
+//Webkit内核浏览器是webkitNotifications接口的，所以用这个进行获取接口
+window.Notifications = window.Notifications || window.webkitNotifications;
+
+//判断是否支持Notifications接口
+if (!window.Notifications) {
+    //不支持这执行这里
+    msgBox.innerHTML='浏览器不支持HTML5 Notifications';
+} else {
+    //支持！
+    
+    //定义一个显示通知狂函数
+    function showNotification() {
+        var newNotification = Notifications.createNotification(
+            //下面依次为图片，标题和内容，不需要留空，但是不要删掉这一行内容
+            "http://static.himlt.com/uploads/2012/07/html5.png",
+            "Hello,我是通知框标题!",
+            "女士们先生们大家好，我是通知框内容。hi,i'm Notification body."
+        );
+        newNotification.ondisplay = function() {
+            //在显示后执行该函数内容
+            //这里可以设置多少时间后移去通知窗体
+            var temp = this;
+            window.setTimeout( function(){temp.cancel();} , 10000);
+        };
+        //显示通知框
+        newNotification.show();
+    }
+    
+    //检测浏览器用户是否允许Notification事件
+    function checkPermission() {
+        var permissionLevel = window.Notifications.checkPermission();
+        if (permissionLevel == 0) {
+            //允许Notification事件
+            msgBox.innerHTML = '您已授权此页面显示网页通知！<br>若您并没有看到任何网页通知，则表示您的浏览器对网页通知特性的实现存在问题！';
+            showNotification();
+        } else if (permissionLevel == 1) {
+            //用户未设置接受或者不允许Notification事件
+            msgBox.innerHTML = '请点击“允许”按钮，授权此页面显示。';
+            //提示用户接受或者不允许Notification事件
+            window.Notifications.requestPermission(checkPermission);
+        } else { 
+            //用户不允许Notification事件
+            msgBox.innerHTML = '您已选择禁止本页面显示网页通知！<br>若您从未看到任何提示条或对话框请求授权，则表示您的浏览器不支持网页通知特性！';
+        }
+    }
+    
+    //侦听按钮点击事件，通知入口为checkPermission();
+    document.getElementById('showButton').addEventListener('click', checkPermission, false);
+}
+</script> 
+    </section>
+  </article>
+  <article>
+    <h1 align='center'> Mutimedia </h1>
+    <p align='center'> 多媒体 <img style='height: 25px' src='images/HTML5_MultiMedia_32.png'> </p>
+  </article>
+  <article>
+    <h3> Canvas 2D </h3>
+    <section>
+      <style>
+              #canvas-area {
+                background: white;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                border: 1px solid #bbb;
+              }
+            </style>
+      <pre>
+&lt;canvas id="canvas" width="778" height="220"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var gl = document.getElementById("canvas").<b>getContext</b>("experimental-webgl");
+  gl.<b>viewport</b>(0, 0, canvas.width, canvas.height);
+  ...
+&lt;/script&gt;
+</pre>
+      <canvas id="canvas-area" width="778" height="225"></canvas>
+      <script defer>
+              var canvasContext = document.getElementById("canvas-area").getContext("2d");
+              canvasContext.fillRect(250, 25, 150, 100);
+              canvasContext.beginPath();
+              canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2, false);
+              canvasContext.lineWidth = 15;
+              canvasContext.lineCap = 'round';
+              canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+              canvasContext.stroke();
+            </script> 
+    </section>
+  </article>
+  <article>
+    <h3> Canvas 3D(WebGL) </h3>
+    <section>
+      <pre>
+&lt;canvas id="canvas" width="838" height="220"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var gl = document.getElementById("canvas").<b>getContext</b>("experimental-webgl");
+  gl.<b>viewport</b>(0, 0, canvas.width, canvas.height);
+  ...
+&lt;/script&gt;
+</pre>
+      <a href="http://slides.html5rocks.com/src/webgl/san_angeles.html" target="_blank">HTML5Rocks</a>
+      <canvas id="iCanvas" style="border: 1px solid #000;width:800px;height: 300px;"></canvas>
+    </section>
+  </article>
+  <article>
+    <h3> SVG(Scalable Vector Graphics) </h3>
+    <section>
+    <pre>
+&lt;html&gt;
+  <b>&lt;svg&gt;
+    &lt;circle id="myCircle" class="important" cx="50%" cy="50%" r="100" 
+        fill="url(#myGradient)"
+        onmousedown="alert('hello');"/&gt;
+  &lt;/svg&gt;</b>
+&lt;/html&gt;
+</pre>
+    <div class="svg"></div>
+    <script defer>
+            // insert SVG using script until SVG in HTML5 is more widely supported
+            // (currently supported in IE 9 and Firefox nightlies only)
+            var container = document.getElementsByClassName('svg')[0];
+            var svgns = 'http://www.w3.org/2000/svg';
+            var svg = document.createElementNS(svgns, 'svg');
+            svg.setAttribute('width', '300px');
+            svg.setAttribute('height', '300px');
+            
+            // our linearGradient
+            var defs = document.createElementNS(svgns, 'defs');
+            var gradient = document.createElementNS(svgns, 'linearGradient');
+            gradient.setAttribute('id', 'myGradient');
+            gradient.setAttribute('x1', '0%');
+            gradient.setAttribute('y1', '100%');
+            gradient.setAttribute('x2', '100%');
+            gradient.setAttribute('y2', '0%');
+            var stop = document.createElementNS(svgns, 'stop');
+            stop.setAttribute('offset', '5%');
+            stop.setAttribute('stop-color', 'red');
+            gradient.appendChild(stop);
+            stop = document.createElementNS(svgns, 'stop');
+            stop.setAttribute('offset', '95%');
+            stop.setAttribute('stop-color', 'blue');
+            stop.setAttribute('stop-opacity', '0.5');
+            gradient.appendChild(stop);
+            defs.appendChild(gradient);
+            svg.appendChild(defs);
+            
+            // our example circle
+            var circle = document.createElementNS(svgns, 'circle');
+            circle.setAttribute('cx', '50%');
+            circle.setAttribute('cy', '50%');
+            circle.setAttribute('r', 100);
+            circle.setAttribute('fill', 'url(#myGradient)');
+            circle.setAttribute('stroke-color', 'red');
+            circle.addEventListener('mousedown', function() {
+              alert('hello');
+            }, false);
+            svg.appendChild(circle);
+            container.appendChild(svg);
+          </script> 
+  </article>
+  <article>
+    <h3> SVG Example </h3>
+    <section>
+    <style>
+            #svg-example {
+              margin-left: 150px;
+              margin-top: 40px;
+              padding: 0;
+              width: 550px;
+              height: 540px;
+            }
+          </style>
+    <div id="svg-example"></div>
+    <script defer>
+            document.querySelector('#svg-example').innerHTML = '<object type="image/svg+xml" style="border:none; width:550px; height:540px; background: white;" data="images/famoustiger.svg"></object>';
+          </script> 
+  </article>
+  <article>
+    <h1 align='center'> CSS3 </h1>
+    <p align='center'> 样式表 <img style='height: 25px' src='images/HTML5_Styling_32.png'> </p>
+  </article>
+  <article>
+    <h3> Columns </h3>
+    <style>
+          #columns-no-example {
+            -webkit-column-count: 2;
+            -webkit-column-rule: 1px solid #bbb;
+            -webkit-column-gap: 2em;
+            -moz-column-count: 2;
+            -moz-column-rule: 1px solid #bbb;
+            -moz-column-gap: 2em;
+            column-count: 2;
+            column-rule: 1px solid #bbb;
+            column-gap: 2em;
+          }
+          #columns-no-example p {
+            font-size: 15px;
+          }
+          </style>
+    <section>
+      <pre>
+-webkit-<b>column-count</b>: <span id="columns-no-value">2</span>; <input type="range" min="1" max="6" value="2" onchange="changeColumnNoSlider(event)">
+-webkit-<b>column-rule</b>: 1px solid #bbb;
+-webkit-<b>column-gap</b>: 2em;
+</pre>
+    </section>
+    <div id="columns-no-example" class="example">
+      <p> In March 1936, an unusual confluence of forces occurred in 
+        Santa Clara County. </p>
+      <p> A long cold winter delayed the blossoming of the millions of 
+        cherry, apricot, peach, and prune plum trees covering hundreds 
+        of square miles of the Valley floor. Then, unlike many years, 
+        the rains that followed were light and too early to knock 
+        the blossoms from their branches. </p>
+      <p> Instead, by the billions, they all burst open at once. 
+        Seemingly overnight, the ocean of green that was the Valley 
+        turned into a low, soft, dizzyingly perfumed cloud of pink 
+        and white. Uncounted bees and yellow jackets, newly born, 
+        raced out of their hives and holes, overwhelmed by this 
+        impossible banquet. </p>
+      <p> It roared off the Pacific Ocean, through the nearly 
+        uninhabited passes of the Santa Cruz Mountains and then, 
+        flattening out, poured down into the great alluvial plains 
+        of the Valley. A tidal bore of warm air, it tore along the 
+        columns of trees, ripped the blossoms apart and carried them 
+        off in a fluttering flood of petals like foam rolling up a 
+        beach. </p>
+    </div>
+    <script defer>
+            function changeColumnNoSlider(event) {
+              var val = event.target.value;
+              document.getElementById('columns-no-value').textContent = val;
+              var el = document.getElementById('columns-no-example');
+              el.style.webkitColumnCount = val;
+              el.style.MozColumnCount = val;
+            }
+          </script> 
+  </article>
+  <article>
+    <h3> Text Stroke </h3>
+    <style>
+            #text-stroke-example { 
+              font-size: 85px;
+              padding: 20px 0;
+              text-align: center;
+              -webkit-text-stroke-color: red;
+              -webkit-text-fill-color: black;
+            }
+          </style>
+    <section>
+      <pre>
+div {
+  -webkit-<b>text-fill-color</b>: black;
+  -webkit-<b>text-stroke-color</b>: red;
+  -webkit-<b>text-stroke-width</b>: <span id="text-stroke-value">0.00</span>px; <input id="text-stroke" type="range" min="0" max="50" value="0" onchange="changeTextStroke()">
+}
+</pre>
+    </section>
+    <div id="text-stroke-example" class="example"> Text Stroke </div>
+    <script defer>
+              function changeTextStroke() {
+                var width = (document.getElementById('text-stroke').value * 0.25).toFixed(2);
+                document.getElementById('text-stroke-example').style.webkitTextStrokeWidth = width + 'px';
+                document.getElementById('text-stroke-value').textContent = width;
+              }
+            </script> 
+  </article>
+  <article>
+    <h3> Opacity </h3>
+    <style>
+              #opacity-body {
+                font-size: 84%;
+                max-width: 800px;
+                background: url(src/opacity_bg.jpg) top center no-repeat;
+                margin: 0 auto;
+                padding: 20px;
+                -webkit-border-radius: 8px;
+                -khtml-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+              }
+              #opacity-example {
+                margin: 100px auto;
+                font-size: 80px;
+                line-height: 200px;
+                text-align: center;
+                font-weight: bold;
+                letter-spacing: -4px;
+                -webkit-border-radius: 5px;
+                -khtml-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                text-shadow: none;
+                color: rgba(255, 0, 0, 0.746094);
+                background-image: initial;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: rgba(0, 0, 255, 0.746094);
+                background-position: initial initial;
+                background-repeat: initial initial;
+              }
+            </style>
+    <section>
+      <pre>
+ color: <b>rgba</b>(255, 0, 0, <span id="opacity-color-value">0.75</span>); <input id="opacity-color" type="range" min="0" max="100" value="75" onchange="changeOpacity()">
+  background: <b>rgba</b>(0, 0, 255, <span id="opacity-background-value">0.75</span>); <input id="opacity-background" type="range" min="0" max="100" value="75" onchange="changeOpacity()">
+</pre>
+    </section>
+    <div id="opacity-body">
+      <div id="opacity-example"> Independent opacity </div>
+    </div>
+    <script defer>
+              function changeOpacity() {
+                var textOpacity = (document.getElementById('opacity-color').value / 100).toFixed(2);
+                var backgroundOpacity = (document.getElementById('opacity-background').value / 100).toFixed(2);
+
+                var el = document.getElementById('opacity-example');
+
+                el.style.color = 'rgba(255, 0, 0, ' + textOpacity + ')';
+                el.style.background = 'rgba(0, 0, 255, ' + backgroundOpacity + ')';
+
+                document.getElementById('opacity-color-value').textContent = textOpacity;
+                document.getElementById('opacity-background-value').textContent = backgroundOpacity;
+              }
+
+              changeOpacity();
+            </script> 
+  </article>
+  <article>
+    <h3> Border Radius </h3>
+    <style>
+.border_radius{width:380px; background:#a0b3d6; -moz-border-radius:30px; -webkit-border-radius:30px; padding:30px;}
+.border_radius .in{background:white; -moz-border-radius:20px; -webkit-border-radius:20px; padding:30px 10px;}
+          </style>
+    <section>
+      <pre>
+.border_radius{ -moz-border-radius:30px; -webkit-border-radius:30px;}
+.border_radius 
+.in{-moz-border-radius:20px; -webkit-border-radius:20px;}
+</pre>
+    </section>
+    <div class="border_radius">
+      <div class="in">CSS3 border-radius实现的圆角效果</div>
+    </div>
+  </article>
+  <article>
+    <h3> Shadows </h3>
+    <style>
+            #shadow-example {
+              font-size: 75px;
+              margin: 10px 10px 30px 10px;
+              padding: 20px;
+              text-align: center;
+            }
+          </style>
+    <section>
+      <pre>
+<b>text-shadow</b>: 
+  rgba(64, 64, 64, 0.5) 
+  <span id="shadows-text-x-value">0</span>px <input id="shadows-text-x" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-text-y-value">0</span>px <input id="shadows-text-y" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-text-size-value">0</span>px; <input id="shadows-text-size" type="range" min="0" max="9" value="0" onchange="changeShadow(event)">
+<br><b>box-shadow</b>: 
+  rgba(0, 0, 128, 0.25) 
+  <span id="shadows-box-x-value">0</span>px <input id="shadows-box-x" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-box-y-value">0</span>px <input id="shadows-box-y" type="range" min="-9" max="9" value="0" onchange="changeShadow(event)">
+  <span id="shadows-box-size-value">0</span>px; <input id="shadows-box-size" type="range" min="0" max="9" value="0" onchange="changeShadow(event)">
+</pre>
+    </section>
+    <div id="shadow-example" class="example"> Shadows example </div>
+    <script defer>
+            function changeShadow() {
+              var el = document.getElementById('shadow-example');
+
+              var textXVal = document.getElementById('shadows-text-x').value;
+              var textYVal = document.getElementById('shadows-text-y').value;
+              var textSizeVal = document.getElementById('shadows-text-size').value;
+
+              document.getElementById('shadows-text-x-value').textContent = textXVal;
+              document.getElementById('shadows-text-y-value').textContent = textYVal;
+              document.getElementById('shadows-text-size-value').textContent = textSizeVal;
+
+              var boxXVal = document.getElementById('shadows-box-x').value;
+              var boxYVal = document.getElementById('shadows-box-y').value;
+              var boxSizeVal = document.getElementById('shadows-box-size').value;
+
+              document.getElementById('shadows-box-x-value').textContent = boxXVal;
+              document.getElementById('shadows-box-y-value').textContent = boxYVal;
+              document.getElementById('shadows-box-size-value').textContent = boxSizeVal;
+
+              el.style.textShadow = 'rgba(64, 64, 64, 0.5) ' + textXVal + 'px ' + textYVal + 'px ' + textSizeVal + 'px';
+              el.style.webkitBoxShadow = 'rgba(0, 0, 128, 0.25) ' + boxXVal + 'px ' + boxYVal + 'px ' + boxSizeVal + 'px';
+              el.style.MozBoxShadow = 'rgba(0, 0, 128, 0.25) ' + boxXVal + 'px ' + boxYVal + 'px ' + boxSizeVal + 'px';
+            }
+          </script> 
+  </article>
+  <article>
+    <h3> Transitions </h3>
+    <style>
+            #transitions-box-2 {
+              -webkit-transition: margin-left 1s ease-in-out;
+              -moz-transition: margin-left 1s ease-in-out;
+              -o-transition: margin-left 1s ease-in-out;
+              transition: margin-left 1s ease-in-out;
+            }
+            .transitions .left {
+              margin-left: 0;
+            }
+            .transitions .right {
+              margin-left: 780px;
+            }
+            .transitions div {
+              width: 20px;
+              height: 20px;
+              background: red;
+            }
+          </style>
+    <section>
+      <pre>#box {
+  -webkit-<b>transition</b>: margin-left 1s ease-in-out;
+}
+
+document.getElementById('box').className = 'left'; <button onclick="transitionLeft(2)">Left</button>
+document.getElementById('box').className = 'right'; <button onclick="transitionRight(2)">Right</button>
+</pre>
+      <div class="transitions example" style="background-color:#ccc">
+        <div id="transitions-box-2"></div>
+      </div>
+      <script defer>
+              function transitionLeft(no) {
+                document.getElementById('transitions-box-' + no).className = 'left';
+              }
+              function transitionRight(no) {
+                document.getElementById('transitions-box-' + no).className = 'right';
+              }
+            </script> 
+    </section>
+  </article>
+  <article>
+    <h3> Transforms </h3>
+    <style>
+            #threed-example {
+              margin: 50px 20px;
+              -webkit-transform: rotateZ(5deg);
+              -moz-transform: rotateZ(5deg);
+              -o-transform: rotateZ(5deg);
+              transform: rotateZ(5deg);
+              -webkit-transition: -webkit-transform 2s ease-in-out;
+              -moz-transition: -moz-transform 2s ease-in-out;
+              -o-transition: -o-transform 2s ease-in-out;
+              transition: transform 2s ease-in-out;
+            }
+            #threed-example:hover {
+              -webkit-transform: rotateZ(-5deg);
+              -moz-transform: rotateZ(-5deg);
+              -o-transform: rotateZ(-5deg);
+              transform: rotateZ(-5deg);
+            }
+          </style>
+    <section>
+      <p class="center"> Hover over me: </p>
+      <pre id="threed-example">-webkit-<b>transform</b>: <b>rotateY</b>(45deg);
+-webkit-transform: <b>scaleX</b>(25deg);
+-webkit-transform: <b>translate3d</b>(0, 0, 90deg);
+-webkit-transform: <b>perspective</b>(500px)
+</pre>
+      <pre>#threed-example {
+  -webkit-transform: rotateZ(5deg);
+
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+#threed-example:hover {
+  -webkit-transform: rotateZ(-5deg);
+}
+</pre>
+    </section>
+  </article>
+  <article>
+    <h3> Animations </h3>
+    <style>
+            #animation-example {
+              font-family: Arial;
+              text-align: center;
+              line-height: 100px;
+            }
+            #animation-note { 
+              font-size: 10px;
+            }
+            /* presently webkit-only */
+            @-webkit-keyframes pulse {
+             from {
+               opacity: 0.0;
+               font-size: 50px;
+             }
+             to {
+               opacity: 1.0;
+               font-size: 100px;
+             }
+            }
+
+            #animation-example {
+              -webkit-animation-name: pulse;
+              -webkit-animation-duration: 2s;
+              -webkit-animation-iteration-count: infinite;
+              -webkit-animation-timing-function: ease-in-out;
+              -webkit-animation-direction: alternate;
+            }
+          </style>
+    <section>
+      <pre>@-webkit-<b>keyframes</b> <em>pulse</em> {
+ <b>from</b> {
+   opacity: 0.0;   font-size: 100%;
+ }
+ <b>to</b> {
+   opacity: 1.0;   font-size: 200%;
+ }
+}
+div {
+  -webkit-<b>animation-name</b>: <em>pulse</em>;
+  -webkit-<b>animation-duration</b>: 2s;
+  -webkit-<b>animation-iteration-count</b>: infinite;
+  -webkit-<b>animation-timing-function</b>: ease-in-out;
+  -webkit-<b>animation-direction</b>: alternate;
+}
+</pre>
+      <p id="animation-note"> </p>
+      <div id="animation-example" class="example"> Pulse! </div>
+    </section>
+  </article>
+  <article> <q> The best way to predict the future is to invent it. </q>
+    <div class='author'> Alan Kay </div>
+  </article>
+  <article>
+    <h1 align='center'> Thank You! </h1>
+  </article>
+</section>
+</body>
+</html>
